@@ -1,3 +1,3 @@
 class Config:
-    BASE_URL = 'http://example.com'
+    BASE_URL = 'https://katalon-demo-cura.herokuapp.com/'
     BROWSER = 'chrome'

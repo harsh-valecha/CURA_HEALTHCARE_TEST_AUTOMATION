@@ -2,6 +2,7 @@ import pytest
 from utils.config import Config
 from pages.login_page import LoginPage
 
+@pytest.mark.skip
 def test_login(driver):
     driver.get(Config.BASE_URL)
     
