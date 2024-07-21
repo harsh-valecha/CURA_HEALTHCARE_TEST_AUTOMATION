@@ -12,6 +12,7 @@ Link - https://katalon-demo-cura.herokuapp.com/
 - POM 
 - Multibrowser testing
 - Data driven test execution
+- Saves Screenshots for failed testcases in screenshots directory
 
 
 ## 🚀 About Me
