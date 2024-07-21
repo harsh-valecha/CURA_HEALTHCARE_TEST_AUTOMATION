@@ -1,15 +1,15 @@
 import pytest
 from utils.config import Config
 from pages.login_page import LoginPage
-from users.credentials import UserCredentials
+
 
 @pytest.mark.login
 def test_login(driver):
     driver.get(Config.LOGIN_URL)
     
     login_page = LoginPage(driver)
-    login_page.enter_username(UserCredentials.username)
-    login_page.enter_password(UserCredentials.password)
+    login_page.enter_username(Config.username)
+    login_page.enter_password(Config.password)
     login_page.click_login()
     try:
         if login_page.get_error():
