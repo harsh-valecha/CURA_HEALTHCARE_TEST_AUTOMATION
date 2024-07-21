@@ -3,9 +3,9 @@ from selenium.webdriver.common.by import By
 class LoginPage:
     def __init__(self, driver):
         self.driver = driver
-        self.username_input = (By.ID, 'username')
-        self.password_input = (By.ID, 'password')
-        self.login_button = (By.ID, 'login')
+        self.username_input = (By.ID, 'txt-username')
+        self.password_input = (By.ID, 'txt-password')
+        self.login_button = (By.ID, 'btn-login')
 
     def enter_username(self, username):
         self.driver.find_element(*self.username_input).send_keys(username)

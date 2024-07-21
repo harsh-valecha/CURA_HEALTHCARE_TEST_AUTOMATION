@@ -1,14 +1,15 @@
 import pytest
 from utils.config import Config
 from pages.login_page import LoginPage
+from users.credentials import UserCredentials
 
-@pytest.mark.skip
+
 def test_login(driver):
-    driver.get(Config.BASE_URL)
+    driver.get(Config.LOGIN_URL)
     
     login_page = LoginPage(driver)
-    login_page.enter_username('testuser')
-    login_page.enter_password('password')
+    login_page.enter_username(UserCredentials.username)
+    login_page.enter_password(UserCredentials.password)
     login_page.click_login()
-
-    assert "Dashboard" in driver.title
+    expected_url = 'https://katalon-demo-cura.herokuapp.com/#appointment'
+    assert driver.current_url == expected_url , f"URL mismatch: expected {expected_url}, got {driver.current_url}"
