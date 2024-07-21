@@ -2,6 +2,7 @@
 # CURA HEALTH CARE TEST AUTOMATION 
 
 This Project if for automating the test execution for CURA Health Care APP
+Link - https://katalon-demo-cura.herokuapp.com/
 
 
 ## Features
