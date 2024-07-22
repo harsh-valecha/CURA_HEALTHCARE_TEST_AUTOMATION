@@ -5,6 +5,7 @@ This Project is for automating the test execution for CURA Health Care APP
 
 Link - https://katalon-demo-cura.herokuapp.com/
 
+Testing Framework Used - https://github.com/harsh-valecha/Testing_Framework_Selenium_Pytest
 
 ## Features
 
