@@ -16,6 +16,7 @@ class HomePage:
         self.comment_txt = (By.ID,"txt_comment")
         self.bookappointment_btn = (By.ID,"btn-book-appointment")
         self.appointment_confirmation_label = (By.XPATH,"//h2[text()='Appointment Confirmation']")
+        self.go_home_btn = (By.XPATH,"//a[.='Go to Homepage']")
 
 
     def click_appointment(self):
@@ -76,3 +77,7 @@ class HomePage:
             return True
         else:
             return False
+        
+
+    def click_go_to_home(self):
+        self.driver.find_element(*self.go_home_btn).click()

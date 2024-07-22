@@ -63,6 +63,7 @@ def test_registration(driver):
     home_page.type_comment('Book it !!')
     home_page.click_bookappointment()
     assert home_page.appointment_is_confirmed()== True
-
+    home_page.click_go_to_home()
+    assert driver.current_url == Config.BASE_URL
 
 
