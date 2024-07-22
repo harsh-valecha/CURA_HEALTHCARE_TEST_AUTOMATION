@@ -21,3 +21,4 @@ def test_login(driver):
     finally:
         expected_url = 'https://katalon-demo-cura.herokuapp.com/#appointment'
         assert driver.current_url == expected_url , f"URL mismatch: expected {expected_url}, got {driver.current_url}"
+        return driver
