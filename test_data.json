@@ -1,0 +1,72 @@
+[
+    {
+        "facility": "Hongkong CURA Healthcare Center",
+        "readmission": true,
+        "program": "Medicare",
+        "visit_date": "15/03/2024",
+        "comment": "DESbEebhFx"
+    },
+    {
+        "facility": "Tokyo CURA Healthcare Center",
+        "readmission": false,
+        "program": "Medicaid",
+        "visit_date": "15/07/2024",
+        "comment": "tFARtwVULO"
+    },
+    {
+        "facility": "Hongkong CURA Healthcare Center",
+        "readmission": true,
+        "program": "Medicare",
+        "visit_date": "06/11/2024",
+        "comment": "NLaGyznrJl"
+    },
+    {
+        "facility": "Tokyo CURA Healthcare Center",
+        "readmission": false,
+        "program": "Medicare",
+        "visit_date": "31/03/2024",
+        "comment": "ugbUHFXQsQ"
+    },
+    {
+        "facility": "Tokyo CURA Healthcare Center",
+        "readmission": false,
+        "program": "Medicare",
+        "visit_date": "03/04/2024",
+        "comment": "duULhHDdIj"
+    },
+    {
+        "facility": "Seoul CURA Healthcare Center",
+        "readmission": false,
+        "program": "Medicaid",
+        "visit_date": "15/11/2024",
+        "comment": "GOqnoACEfi"
+    },
+    {
+        "facility": "Seoul CURA Healthcare Center",
+        "readmission": true,
+        "program": "Medicare",
+        "visit_date": "30/10/2024",
+        "comment": "rQhHyEcMJT"
+    },
+    {
+        "facility": "Hongkong CURA Healthcare Center",
+        "readmission": false,
+        "program": "None",
+        "visit_date": "25/05/2024",
+        "comment": "xsuCBsaDyx"
+    },
+    {
+        "facility": "Seoul CURA Healthcare Center",
+        "readmission": true,
+        "program": "Medicaid",
+        "visit_date": "04/08/2024",
+        "comment": "oaVUNrafYZ"
+    },
+    {
+        "facility": "Seoul CURA Healthcare Center",
+        "readmission": false,
+        "program": "Medicaid",
+        "visit_date": "04/08/2024",
+        "comment": "kaWdrpwOlt"
+    }
+]

@@ -2,6 +2,12 @@ import pytest
 from utils.config import Config
 from pages.home_page import HomePage
 from .test_login import test_login
+import json
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 
 facility = ["Tokyo CURA Healthcare Center","Hongkong CURA Healthcare Center","Seoul CURA Healthcare Center"]
 program = ["medicare","medicaid","none"]
@@ -51,19 +57,34 @@ def test_logout(driver):
     if home_page.logout_is_active():
         home_page.click_logout()
         assert driver.current_url == Config.BASE_URL
-    
+        return driver
+
+# reading test data from test_data.json    
+with open("test_data.json") as f:
+    test_data = json.load(f)
+
 # testcase for Registration 
-def test_registration(driver):
+@pytest.mark.parametrize("data",test_data)
+def test_registration(driver ,data):
     driver = test_login(driver)
-    home_page = HomePage(driver,facility=facility[0],program=program[1])
+    home_page = HomePage(driver,facility=data['facility'],program=data['program'])
     home_page.select_facility()
-    home_page.check_readmission()
+    home_page.check_readmission() if data['readmission'] else None
     home_page.click_program()
-    home_page.type_visitdate('21.02.2024')
-    home_page.type_comment('Book it !!')
+    home_page.type_visitdate(data['visit_date'])
+    home_page.type_comment(data['comment'])
     home_page.click_bookappointment()
+
     assert home_page.appointment_is_confirmed()== True
-    home_page.click_go_to_home()
-    assert driver.current_url == Config.BASE_URL
+    # Wait for the "Go to Homepage" button to be clickable
+    wait = WebDriverWait(driver, 10)
+    go_home_btn = wait.until(EC.element_to_be_clickable((By.XPATH, "//a[.='Go to Homepage']")))
+    go_home_btn.click()
+
+    assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/"
+
+    driver.quit()
+    
+    
 
 

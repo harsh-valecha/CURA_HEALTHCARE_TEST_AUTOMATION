@@ -11,7 +11,7 @@ class HomePage:
         self.facility_dropdown = (By.ID,"combo_facility")
         self.facility_value = (By.XPATH,f"//option[@value='{facility}']")
         self.readmission_check = (By.ID,"chk_hospotal_readmission")
-        self.program_radio = (By.ID,f"radio_program_{program}")
+        self.program_radio = (By.XPATH,f"//input[@value='{program}']")
         self.visitdate_txt = (By.ID,"txt_visit_date")
         self.comment_txt = (By.ID,"txt_comment")
         self.bookappointment_btn = (By.ID,"btn-book-appointment")
@@ -74,10 +74,13 @@ class HomePage:
 
     def appointment_is_confirmed(self):
         if self.driver.find_element(*self.appointment_confirmation_label).is_displayed()==True:
-            return True
+            if self.driver.find_element(*self.appointment_confirmation_label).text=='Appointment Confirmation':
+                return True
+            return False
         else:
             return False
         
 
     def click_go_to_home(self):
+        self.driver.implicitly_wait(10)
         self.driver.find_element(*self.go_home_btn).click()
