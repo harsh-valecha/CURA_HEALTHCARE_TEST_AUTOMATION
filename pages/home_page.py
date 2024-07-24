@@ -4,7 +4,7 @@ class HomePage:
     def __init__(self, driver,facility=None,program = None):
         self.driver = driver
         self.make_appointment_btn = (By.ID,'btn-make-appointment')
-        self.navigation_btn = (By.ID,"menu-toggle")
+        self.navigation_btn = (By.XPATH,"//i[@class='fa fa-bars']")
         self.home_btn = (By.XPATH,"//a[text()='Home']")
         self.login_btn = (By.XPATH,"//a[text()='Login']")
         self.logout_btn = (By.XPATH,"//a[text()='Logout']")

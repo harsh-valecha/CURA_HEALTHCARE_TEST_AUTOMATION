@@ -15,7 +15,7 @@ def generate_random_data():
     programs = ["Medicare", "Medicaid", "None"]
     
     data = []
-    for _ in range(10):  # Generating 10 sets of data
+    for _ in range(1):  # Generating 10 sets of data
         entry = {
             "facility": random.choice(facilities),
             "readmission": random.choice([True, False]),
