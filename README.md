@@ -39,5 +39,7 @@ To run a specific marked testcase -
 ```
 pytest -m markername 
 ```
+## License
 
+This project is licensed under the MIT License. See the LICENSE file for details.
 
